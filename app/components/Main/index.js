@@ -8,6 +8,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 import { store, persistor } from '../../store'
 import getTheme from '../../../native-base-theme/components'
+import material from '../../../native-base-theme/variables/material'
 
 import Navigation from './Navigation'
 
@@ -25,7 +26,7 @@ const Main = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<AppLoading />} persistor={persistor}>
-        <StyleProvider style={getTheme()}>
+        <StyleProvider style={getTheme(material)}>
           <Navigation />
         </StyleProvider>
       </PersistGate>
