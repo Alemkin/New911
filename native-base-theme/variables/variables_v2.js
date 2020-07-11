@@ -100,6 +100,7 @@ export default {
   btnTextSizeLarge: 22.5,
   btnTextSizeSmall: 12,
   cardDefaultBg: 'rgba(237,242,244,1)',
+  cardItemPadding: platform === PLATFORM.IOS ? 10 : 12,
   cardBorderColor: '#ccc',
   CheckboxRadius: 0,
   CheckboxBorderWidth: 2,
