@@ -9,7 +9,7 @@ const ButtonSelect = ({ name, infoText = '', number = '', navigation, navigation
   return (
     <>
       <Col size={infoText ? 85 : 100} style={{ alignContent: 'center', justifyContent: 'center' }}>
-        <Button full info large style={{ marginLeft: 20, marginRight: 20, height: 80 }} onPress={number ? () => Linking.openURL(number) : () => navigation.navigate(navigationUrl)}>
+        <Button full info={number ? null : true} success={number ? true : null} large style={{ marginLeft: 20, marginRight: 20, height: 80 }} onPress={number ? () => Linking.openURL(number) : () => navigation.navigate(navigationUrl)}>
           <Text>{name}</Text>
         </Button>
       </Col>

@@ -6,13 +6,14 @@ import { createStackNavigator, TransitionPresets } from '@react-navigation/stack
 
 import RootScreen from '../RootScreen'
 import Directory from '../Directory'
+import DirectoryInfo from '../DirectoryInfo'
 import SituationSelect from '../SituationSelect'
 import ResourceSelectMental from '../ResourceSelectMental'
 import ResourceSelectPhysical from '../ResourceSelectPhysical'
 import MentalSelect from '../MentalSelect'
 import PhysicalSelect from '../PhysicalSelect'
 import variables from '../../../native-base-theme/variables/variables_v2'
-import { DIRECTORY, RESOURCESELECTMENTAL, RESOURCESELECTPHYSICAL, MENTALSELECT, PHYSICALSELECT, SITUATIONSELECT, ROOT } from '../../constants/navigation'
+import { DIRECTORY, DIRECTORYINFO, RESOURCESELECTMENTAL, RESOURCESELECTPHYSICAL, MENTALSELECT, PHYSICALSELECT, SITUATIONSELECT, ROOT } from '../../constants/navigation'
 
 const Stack = createStackNavigator()
 
@@ -100,6 +101,13 @@ const Navigation = () => {
           component={Directory}
           options={{
             title: 'Community Connect - Directory'
+          }}
+        />
+        <Stack.Screen
+          name={DIRECTORYINFO}
+          component={DirectoryInfo}
+          options={{
+            title: 'Directory Info'
           }}
         />
       </Stack.Navigator>
