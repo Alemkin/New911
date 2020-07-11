@@ -23,7 +23,7 @@ const RootScreen = ({ navigation }) => {
           </Col>
           <Col style={{ alignItems: 'center' }}>
             <Button full danger large style={{ margin: 20 }} onPress={() => Linking.openURL(EMERGENCY)}>
-              <Text>Yes</Text>
+              <Text>Call 911</Text>
             </Button>
           </Col>
         </Row>
