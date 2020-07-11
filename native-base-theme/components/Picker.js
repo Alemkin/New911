@@ -1,6 +1,8 @@
 // @flow
 
-export default () => {
+import variable from './../variables/platform'
+
+export default (variables /*: * */ = variable) => {
   const pickerTheme = {
     '.note': {
       color: '#8F8E95'

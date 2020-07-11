@@ -3,26 +3,29 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Container, Content, List, ListItem, Text } from 'native-base'
 
-const ProfileScreen = ({ navigation }) => {
+const Directory = ({ navigation }) => {
   return (
     <Container>
       <StatusBar style='light' />
       <Content>
         <List>
           <ListItem itemDivider>
-            <Text>A</Text>
+            <Text>Mental Health</Text>
           </ListItem>
-          <ListItem>
-            <Text>Alexander Lemkin</Text>
+          <ListItem noIndent>
+            <Text>Social Worker</Text>
           </ListItem>
-          <ListItem>
-            <Text>Ali Connors</Text>
+          <ListItem noIndent>
+            <Text>Suicide Hotline</Text>
           </ListItem>
           <ListItem itemDivider>
-            <Text>B</Text>
+            <Text>Physical</Text>
           </ListItem>
-          <ListItem>
-            <Text>Beatrice Horowitz</Text>
+          <ListItem noIndent>
+            <Text>Non Emergency Police</Text>
+          </ListItem>
+          <ListItem noIndent>
+            <Text>Non Emergency Fire Department</Text>
           </ListItem>
         </List>
       </Content>
@@ -30,8 +33,8 @@ const ProfileScreen = ({ navigation }) => {
   )
 }
 
-ProfileScreen.propTypes = {
+Directory.propTypes = {
   navigation: PropTypes.object.isRequired
 }
 
-export default ProfileScreen
+export default Directory

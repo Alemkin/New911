@@ -9,9 +9,10 @@
       "**/*"
     ],
     "splash": {
-      "image": "./assets/logo.png",
-      "backgroundColor": "#000000",
+      "image": "./assets/logo_v1.png",
+      "backgroundColor": "#EDF2F4",
       "resizeMode": "contain"
-    }
+    },
+    "icon": "./assets/logo_icon.png"
   }
 }

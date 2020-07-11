@@ -5,8 +5,8 @@ import { Text, Button } from 'native-base'
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'
 
 import RootScreen from '../RootScreen'
-import ProfileScreen from '../ProfileScreen'
-import variables from '../../../native-base-theme/variables/platform'
+import Directory from '../Directory'
+import variables from '../../../native-base-theme/variables/variables_v2'
 
 const Stack = createStackNavigator()
 
@@ -16,7 +16,7 @@ const Navigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerStyle: {
-            backgroundColor: variables.brandSuccess
+            backgroundColor: variables.brandDark
           },
           headerTintColor: 'white',
           ...TransitionPresets.SlideFromRightIOS
@@ -26,19 +26,19 @@ const Navigation = () => {
           name='Root'
           component={RootScreen}
           options={({ navigation }) => ({
-            title: 'Boilerplate',
+            title: 'Community Connect',
             headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate('Profile')}>
-                <Text style={{ color: 'white' }}>Profile</Text>
+              <Button transparent onPress={() => navigation.navigate('Directory')}>
+                <Text style={{ color: 'white' }}>Directory</Text>
               </Button>
             )
           })}
         />
         <Stack.Screen
-          name='Profile'
-          component={ProfileScreen}
+          name='Directory'
+          component={Directory}
           options={{
-            title: 'Profile'
+            title: 'Directory'
           }}
         />
       </Stack.Navigator>

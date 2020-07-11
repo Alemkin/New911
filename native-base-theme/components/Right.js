@@ -1,6 +1,8 @@
 // @flow
 
-export default () => {
+import variable from './../variables/platform'
+
+export default (variables /*: * */ = variable) => {
   const rightTheme = {
     'NativeBase.Button': {
       alignSelf: null
