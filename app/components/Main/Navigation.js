@@ -93,7 +93,7 @@ const Navigation = () => {
           name={DIRECTORYINFO}
           component={DirectoryInfo}
           options={{
-            title: 'Directory Info'
+            title: `${appTitle} - Directory Info`
           }}
         />
       </Stack.Navigator>
