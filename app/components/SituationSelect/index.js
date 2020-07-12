@@ -6,6 +6,8 @@ import ButtonSelect from '../ButtonSelect'
 import { Grid, Row, Col } from 'react-native-easy-grid'
 import { TALLAHASSEE_NON_EMERGENCY_POLICE, TALLAHASSEE_NON_EMERGENCY_FIRE } from '../../constants/contactInfo'
 import { MENTALSELECT, PHYSICALSELECT, ROOT } from '../../constants/navigation'
+import * as Linking from 'expo-linking'
+import materialv2 from '../../../native-base-theme/variables/variables_v2'
 
 // TODO move this stuff into a js file and auto populate
 const SituationSelect = ({ navigation }) => {
@@ -18,24 +20,23 @@ const SituationSelect = ({ navigation }) => {
             <H1 style={{ textAlign: 'center' }}>Select Your Situation</H1>
           </Col>
         </Row>
-        <Row size={15} style={{ justifyContent: 'center' }}>
+        <Row size={30} style={{ justifyContent: 'center' }}>
           <ButtonSelect navigation={navigation} navigationUrl={PHYSICALSELECT} name='Physical' infoText='You were in a car accident, Someone is exhibiting threatening behavior, etc...' />
         </Row>
-        <Row size={15} style={{ justifyContent: 'center' }}>
+        <Row size={30} style={{ justifyContent: 'center' }}>
           <ButtonSelect navigation={navigation} navigationUrl={MENTALSELECT} name='Emotional' infoText='You are feeling depressed, Your family member is having an mental health issue, etc...' />
         </Row>
-        <Row size={15} style={{ justifyContent: 'center' }}>
-          <ButtonSelect navigation={navigation} number={TALLAHASSEE_NON_EMERGENCY_FIRE} name='Non-Emergency Fire Dept' infoText='This will connect you with the non-emergency number for your fire department' />
-        </Row>
-        <Row size={15} style={{ justifyContent: 'center' }}>
-          <ButtonSelect navigation={navigation} number={TALLAHASSEE_NON_EMERGENCY_POLICE} name='Non-Emergency Police' infoText='This will connect you with the non-emergency number for your police department' />
-        </Row>
-        <Row size={10} />
         <Row size={10}>
-          <Col style={{ alignContent: 'center', justifyContent: 'center' }}>
-            <Button full danger onPress={() => navigation.navigate(ROOT)}>
-              <Text>I have an emergency</Text>
-            </Button>
+          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess }}>
+            <Text style={{ textAlign: 'center' }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_POLICE)}>Non-Emergency Police</Text>
+          </Col>
+          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess, borderLeftWidth: 1 }}>
+            <Text style={{ textAlign: 'center' }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_FIRE)}>Non-Emergency Fire Dept</Text>
+          </Col>
+        </Row>
+        <Row size={10}>
+          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandDanger, borderTopWidth: 1 }}>
+            <Text style={{ textAlign: 'center' }} onPress={() => navigation.navigate(ROOT)}>I have an emergency</Text>
           </Col>
         </Row>
       </Grid>

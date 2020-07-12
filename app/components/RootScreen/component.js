@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Container, Text, Button, H1, Card, Content, CardItem, Body, Toast } from 'native-base'
+import { Container, Text, Button, H1, Toast } from 'native-base'
 import { Grid, Row, Col } from 'react-native-easy-grid'
 import * as Linking from 'expo-linking'
 import { EMERGENCY } from '../../constants/contactInfo'
