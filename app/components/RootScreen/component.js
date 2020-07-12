@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Container, Text, Button, H1, Card, Content, CardItem, Body } from 'native-base'
+import { Container, Text, Button, H1, Card, Content, CardItem, Body, Toast } from 'native-base'
 import { Grid, Row, Col } from 'react-native-easy-grid'
 import * as Linking from 'expo-linking'
 import { EMERGENCY } from '../../constants/contactInfo'
@@ -14,9 +14,21 @@ const RootScreen = ({ navigation }) => {
       <StatusBar style='light' />
       <Grid>
         <Row size={40} style={{ alignItems: 'center', justifyContent: 'center' }}>
-          <H1>Do you have an emergency?</H1>
+          <H1>Do you have an </H1>
+          <H1
+            onPress={() =>
+              Toast.show({
+                text: 'Example Emergencies: Fire, Someone has passed out, Violence in progress, Serious car accident...',
+                buttonText: 'Got it!',
+                style: { height: 200, backgroundColor: materialv2.brandInfo, margin: 20 },
+                duration: 5000
+              })}
+            style={{ textDecorationLine: 'underline' }}
+          >
+            emergency?
+          </H1>
         </Row>
-        <Row size={30}>
+        <Row size={60}>
           <Col style={{ alignItems: 'center' }}>
             <Button full light large style={{ margin: 20 }} onPress={() => navigation.navigate(SITUATIONSELECT)}>
               <Text>No</Text>
@@ -28,22 +40,6 @@ const RootScreen = ({ navigation }) => {
             </Button>
           </Col>
         </Row>
-        <Row size={25}>
-          <Content>
-            <Card>
-              <CardItem style={{ backgroundColor: materialv2.brandDark }}>
-                <Body>
-                  <Text>Example Emergencies:</Text>
-                  <Text>There is a Fire</Text>
-                  <Text>Someone has passed out</Text>
-                  <Text>There is violence in progress</Text>
-                  <Text>There was a serious car accident</Text>
-                </Body>
-              </CardItem>
-            </Card>
-          </Content>
-        </Row>
-        <Row size={5} />
       </Grid>
     </Container>
   )

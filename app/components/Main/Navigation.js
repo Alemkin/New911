@@ -40,7 +40,7 @@ const Navigation = () => {
           name={SITUATIONSELECT}
           component={SituationSelect}
           options={({ navigation }) => ({
-            title: 'Select Your Situation',
+            title: 'Community Connect',
             headerRight: () => (
               <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
                 <Text style={{ color: 'white' }}>Directory</Text>
@@ -52,7 +52,7 @@ const Navigation = () => {
           name={MENTALSELECT}
           component={MentalSelect}
           options={({ navigation }) => ({
-            title: 'Emotional Selection',
+            title: 'Community Connect',
             headerRight: () => (
               <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
                 <Text style={{ color: 'white' }}>Directory</Text>
@@ -64,7 +64,7 @@ const Navigation = () => {
           name={PHYSICALSELECT}
           component={PhysicalSelect}
           options={({ navigation }) => ({
-            title: 'Physical Selection',
+            title: 'Community Connect',
             headerRight: () => (
               <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
                 <Text style={{ color: 'white' }}>Directory</Text>
@@ -76,7 +76,7 @@ const Navigation = () => {
           name={RESOURCESELECTMENTAL}
           component={ResourceSelectMental}
           options={({ navigation }) => ({
-            title: 'Call Someone',
+            title: 'Community Connect',
             headerRight: () => (
               <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
                 <Text style={{ color: 'white' }}>Directory</Text>
@@ -88,7 +88,7 @@ const Navigation = () => {
           name={RESOURCESELECTPHYSICAL}
           component={ResourceSelectPhysical}
           options={({ navigation }) => ({
-            title: 'Call Someone',
+            title: 'Community Connect',
             headerRight: () => (
               <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
                 <Text style={{ color: 'white' }}>Directory</Text>
