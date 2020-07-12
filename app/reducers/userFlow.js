@@ -9,7 +9,7 @@ import {
 export const resources = {
   [issues.MENTAL_1]: [{ number: SUICIDE_HOTLINE, name: 'Suicide Hotline' }, { number: NATIONALALLIANCE, name: 'National Alliance On Mental Health Hotline' }, { number: SAMSI, name: 'Substance Abuse and Mental Health Hotline' }],
   [issues.MENTAL_2]: [{ number: NATIONALALLIANCE, name: 'National Alliance On Mental Health Hotline' }, { number: NATIONAL_ASSOCIATION_OF_SOCIAL_WORKERS_TALLAHASSEE, name: 'City Social Worker' }, { number: CRISIS_HOTLINE, name: 'Text HOME to Crisis Hotline' }],
-  [issues.MENTAL_3]: [{ number: TALLAHASSEE_NON_EMERGENCY_POLICE, name: 'Non-Emergency Police' }, { number: TALLAHASSEE_NON_EMERGENCY_FIRE, name: 'Non-Emergency Fire Dept' }, { number: CRISIS_HOTLINE, name: 'Text HOME to Crisis Hotline' }],
+  [issues.MENTAL_3]: [{ number: CRISIS_HOTLINE, name: 'Text HOME to Crisis Hotline' }, { number: NATIONAL_ASSOCIATION_OF_SOCIAL_WORKERS_TALLAHASSEE, name: 'City Social Worker' }, { number: NATIONALALLIANCE, name: 'National Alliance On Mental Health Hotline' }],
   [issues.PHYSICAL_1]: [{ number: EMERGENCY, name: '911' }, { number: TALLAHASSEE_NON_EMERGENCY_FIRE, name: 'Non-Emergency Fire Dept' }, { number: TALLAHASSEE_NON_EMERGENCY_POLICE, name: 'Non-Emergency Police' }],
   [issues.PHYSICAL_2]: [{ number: LEGAL_HOTLINE, name: 'Legal Hotline' }, { number: TALLAHASSEE_NON_EMERGENCY_POLICE, name: 'Non-Emergency Police' }, { number: TALLAHASSEE_NON_EMERGENCY_FIRE, name: 'Non-Emergency Fire Dept' }],
   [issues.PHYSICAL_3]: [{ number: WOMENS_HOTLINE, name: 'Domestic Violence Hotline' }, { number: PATHWAYSTOSAFETY, name: 'Pathways To Safety Hotline' }, { number: WOMEN_HELPING_WOMEN_HOTLINE, name: 'Women Helping Women' }]
