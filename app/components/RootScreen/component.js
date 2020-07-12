@@ -18,7 +18,7 @@ const RootScreen = ({ navigation }) => {
           <H1
             onPress={() =>
               Toast.show({
-                text: 'Example Emergencies: Fire, Someone has passed out, Violence in progress, Serious car accident...',
+                text: 'Example Emergencies: Fire, Someone has passed out, Violence in progress, Serious car accident, etc...',
                 buttonText: 'Got it!',
                 style: { height: 200, backgroundColor: materialv2.brandInfo, margin: 20 },
                 duration: 5000
@@ -30,7 +30,19 @@ const RootScreen = ({ navigation }) => {
         </Row>
         <Row size={60}>
           <Col style={{ alignItems: 'center' }}>
-            <Button full light large style={{ margin: 20 }} onPress={() => navigation.navigate(SITUATIONSELECT)}>
+            <Button
+              full light large style={{ margin: 20 }}
+              onPress={() => {
+                Toast.show({
+                  text: 'Glad you are safe! Let us try to find some different help.',
+                  buttonText: 'Thanks!',
+                  style: { height: 100, backgroundColor: materialv2.brandSuccess, margin: 20 },
+                  duration: 3000,
+                  position: 'top'
+                })
+                navigation.navigate(SITUATIONSELECT)
+              }}
+            >
               <Text>No</Text>
             </Button>
           </Col>
