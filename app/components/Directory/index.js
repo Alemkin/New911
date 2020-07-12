@@ -25,7 +25,7 @@ const Directory = ({ navigation }) => {
     <Container>
       <StatusBar style='light' />
       <Content>
-        <Image accessibilityIgnoresInvertColors style={{ alignSelf: 'center', width: 150, height: 150 }} source={require('../../../assets/logo_icon.png')} />
+        <Image accessibilityIgnoresInvertColors style={{ alignSelf: 'center', width: 150, height: 150 }} source={require('../../../assets/logo_1024.png')} />
         <Item>
           <Icon active ios='ios-search' android='md-search' style={{ color: 'white' }} />
           <Input placeholder='Search Directory' onChangeText={filterResources} />
