@@ -45,7 +45,6 @@ const ButtonSelect = ({ name, infoText, navigation, navigationUrl, handlePress }
   )
 }
 
-// TODO move this stuff into a js file and auto populate
 const SituationSelect = ({ navigation }) => {
   const dispatch = useDispatch()
   const handlePress = (key, url) => () => {
@@ -69,11 +68,11 @@ const SituationSelect = ({ navigation }) => {
         </Row>
         <Row size={24} />
         <Row size={10}>
-          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess }}>
-            <Text style={{ textAlign: 'center' }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_POLICE)}>Non-Emergency Police</Text>
+          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_POLICE)}>
+            <Text style={{ textAlign: 'center' }}>Non-Emergency Police</Text>
           </Col>
-          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess, borderLeftWidth: 1 }}>
-            <Text style={{ textAlign: 'center' }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_FIRE)}>Non-Emergency Fire Dept</Text>
+          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess, borderLeftWidth: 1 }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_FIRE)}>
+            <Text style={{ textAlign: 'center' }}>Non-Emergency Fire</Text>
           </Col>
         </Row>
         <Row size={10}>

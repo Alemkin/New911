@@ -9,7 +9,6 @@ import { RESOURCESELECT, ROOT } from '../../constants/navigation'
 import * as issues from '../../constants/issues'
 import { setSpecificIssue } from '../../reducers/userFlow'
 
-// TODO more robust base don selection
 const PhysicalSelect = ({ navigation }) => {
   const dispatch = useDispatch()
   const handlePress = (key, url) => () => {

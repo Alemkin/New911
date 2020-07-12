@@ -7,7 +7,6 @@ import { selectDirectory } from '../../reducers/directory'
 import * as Linking from 'expo-linking'
 import materialv2 from '../../../native-base-theme/variables/variables_v2'
 
-// TODO use dynamic data
 const DirectoryInfo = ({ navigation }) => {
   const directory = useSelector(selectDirectory)
   const directoryInfo = directory.directoryInfo
