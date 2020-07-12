@@ -1,13 +1,22 @@
 import { StatusBar } from 'expo-status-bar'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Container, H1, Button, Text } from 'native-base'
 import ButtonSelect from '../ButtonSelect'
 import { Grid, Row, Col } from 'react-native-easy-grid'
-import { RESOURCESELECTPHYSICAL, ROOT } from '../../constants/navigation'
+import { RESOURCESELECT, ROOT } from '../../constants/navigation'
+import * as issues from '../../constants/issues'
+import { setSpecificIssue } from '../../reducers/userFlow'
 
 // TODO more robust base don selection
 const PhysicalSelect = ({ navigation }) => {
+  const dispatch = useDispatch()
+  const handlePress = (key, url) => () => {
+    dispatch(setSpecificIssue(key))
+    console.log('url', url)
+    navigation.navigate(url)
+  }
   return (
     <Container>
       <StatusBar style='light' />
@@ -18,13 +27,13 @@ const PhysicalSelect = ({ navigation }) => {
           </Col>
         </Row>
         <Row size={20} style={{ justifyContent: 'center' }}>
-          <ButtonSelect navigationUrl={RESOURCESELECTPHYSICAL} navigation={navigation} name='I am hurt and I can not move' />
+          <ButtonSelect name={issues.PHYSICAL_1} handlePress={handlePress(issues.PHYSICAL_1, RESOURCESELECT)} />
         </Row>
         <Row size={20} style={{ justifyContent: 'center' }}>
-          <ButtonSelect navigationUrl={RESOURCESELECTPHYSICAL} navigation={navigation} name='I have been in a car accident' />
+          <ButtonSelect name={issues.PHYSICAL_2} handlePress={handlePress(issues.PHYSICAL_2, RESOURCESELECT)} />
         </Row>
         <Row size={20} style={{ justifyContent: 'center' }}>
-          <ButtonSelect navigationUrl={RESOURCESELECTPHYSICAL} navigation={navigation} name='I am in a household where I am being abused' />
+          <ButtonSelect name={issues.PHYSICAL_3} handlePress={handlePress(issues.PHYSICAL_3, RESOURCESELECT)} />
         </Row>
         <Row size={10} />
         <Row size={10}>

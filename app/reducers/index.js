@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import pokemon from './pokemon'
+import directory from './directory'
+import userFlow from './userFlow'
 
 const rootReducer = combineReducers({
-  pokemon
+  directory,
+  userFlow
 })
 
 export default rootReducer

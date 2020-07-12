@@ -8,14 +8,20 @@ import RootScreen from '../RootScreen'
 import Directory from '../Directory'
 import DirectoryInfo from '../DirectoryInfo'
 import SituationSelect from '../SituationSelect'
-import ResourceSelectMental from '../ResourceSelectMental'
-import ResourceSelectPhysical from '../ResourceSelectPhysical'
+import ResourceSelect from '../ResourceSelect'
 import MentalSelect from '../MentalSelect'
 import PhysicalSelect from '../PhysicalSelect'
 import variables from '../../../native-base-theme/variables/variables_v2'
-import { DIRECTORY, DIRECTORYINFO, RESOURCESELECTMENTAL, RESOURCESELECTPHYSICAL, MENTALSELECT, PHYSICALSELECT, SITUATIONSELECT, ROOT } from '../../constants/navigation'
+import { DIRECTORY, DIRECTORYINFO, RESOURCESELECT, MENTALSELECT, PHYSICALSELECT, SITUATIONSELECT, ROOT } from '../../constants/navigation'
 
 const Stack = createStackNavigator()
+
+const appTitle = 'Community Connect'
+
+const SharedButton = ({ navigation }) =>
+  <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
+    <Text style={{ color: 'white' }}>Directory</Text>
+  </Button>
 
 const Navigation = () => {
   return (
@@ -33,18 +39,16 @@ const Navigation = () => {
           name={ROOT}
           component={RootScreen}
           options={({ navigation }) => ({
-            title: 'Community Connect'
+            title: appTitle
           })}
         />
         <Stack.Screen
           name={SITUATIONSELECT}
           component={SituationSelect}
           options={({ navigation }) => ({
-            title: 'Community Connect',
+            title: appTitle,
             headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-                <Text style={{ color: 'white' }}>Directory</Text>
-              </Button>
+              <SharedButton navigation={navigation} />
             )
           })}
         />
@@ -52,11 +56,9 @@ const Navigation = () => {
           name={MENTALSELECT}
           component={MentalSelect}
           options={({ navigation }) => ({
-            title: 'Community Connect',
+            title: appTitle,
             headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-                <Text style={{ color: 'white' }}>Directory</Text>
-              </Button>
+              <SharedButton navigation={navigation} />
             )
           })}
         />
@@ -64,35 +66,19 @@ const Navigation = () => {
           name={PHYSICALSELECT}
           component={PhysicalSelect}
           options={({ navigation }) => ({
-            title: 'Community Connect',
+            title: appTitle,
             headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-                <Text style={{ color: 'white' }}>Directory</Text>
-              </Button>
+              <SharedButton navigation={navigation} />
             )
           })}
         />
         <Stack.Screen
-          name={RESOURCESELECTMENTAL}
-          component={ResourceSelectMental}
+          name={RESOURCESELECT}
+          component={ResourceSelect}
           options={({ navigation }) => ({
-            title: 'Community Connect',
+            title: appTitle,
             headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-                <Text style={{ color: 'white' }}>Directory</Text>
-              </Button>
-            )
-          })}
-        />
-        <Stack.Screen
-          name={RESOURCESELECTPHYSICAL}
-          component={ResourceSelectPhysical}
-          options={({ navigation }) => ({
-            title: 'Community Connect',
-            headerRight: () => (
-              <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-                <Text style={{ color: 'white' }}>Directory</Text>
-              </Button>
+              <SharedButton navigation={navigation} />
             )
           })}
         />
@@ -100,7 +86,7 @@ const Navigation = () => {
           name={DIRECTORY}
           component={Directory}
           options={{
-            title: 'Community Connect - Directory'
+            title: `${appTitle} - Directory`
           }}
         />
         <Stack.Screen

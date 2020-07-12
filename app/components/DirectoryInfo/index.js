@@ -1,36 +1,38 @@
 import { StatusBar } from 'expo-status-bar'
 import PropTypes from 'prop-types'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Container, H1, Content, List, ListItem, Left, Right, Text, Icon } from 'native-base'
-import { SUICIDE_HOTLINE } from '../../constants/contactInfo'
-import { SUICIDE_PREVENTION_SITE } from '../../constants/websites'
+import { selectDirectory } from '../../reducers/directory'
 import * as Linking from 'expo-linking'
 import materialv2 from '../../../native-base-theme/variables/variables_v2'
 
 // TODO use dynamic data
 const DirectoryInfo = ({ navigation }) => {
+  const directory = useSelector(selectDirectory)
+  const directoryInfo = directory.directoryInfo
   return (
     <Container>
       <StatusBar style='light' />
       <Content>
-        <H1 style={{ margin: 20 }}>National Suicide Prevention Lifeline</H1>
+        <H1 style={{ margin: 20 }}>{directoryInfo.name}</H1>
         <List>
           <ListItem>
             <Left>
-              <Text>The National Suicide Prevention Lifeline is a national network of local crisis centers that provides free and confidential emotional support to people in suicidal crisis or emotional distress 24 hours a day, 7 days a week. We're committed to improving crisis services and advancing suicide prevention by empowering individuals, advancing professional best practices, and building awareness.</Text>
+              <Text>{directoryInfo.description}</Text>
             </Left>
           </ListItem>
-          <ListItem noIndent style={{ backgroundColor: materialv2.brandInfo }} onPress={() => Linking.openURL(SUICIDE_PREVENTION_SITE)}>
+          <ListItem noIndent style={{ backgroundColor: materialv2.brandInfo }} onPress={() => Linking.openURL(directoryInfo.website)}>
             <Left>
-              <Text>https://suicidepreventionlifeline.org/</Text>
+              <Text>{directoryInfo.website}</Text>
             </Left>
             <Right>
               <Icon name='arrow-forward' />
             </Right>
           </ListItem>
-          <ListItem noIndent style={{ backgroundColor: materialv2.brandInfo }} onPress={() => Linking.openURL(SUICIDE_HOTLINE)}>
+          <ListItem noIndent style={{ backgroundColor: materialv2.brandInfo }} onPress={() => Linking.openURL(directoryInfo.number)}>
             <Left>
-              <Text>1-800-273-8255</Text>
+              <Text>{directoryInfo.number}</Text>
             </Left>
             <Right>
               <Icon name='arrow-forward' />
