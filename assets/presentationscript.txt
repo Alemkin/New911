@@ -1,0 +1,62 @@
+https://docs.google.com/presentation/d/1Uf4yVgNTN7N9W_OKw1Q7whzFFdFPrjrsz2r1QbWLSks/edit#slide=id.g824ad7ac5e_13_11
+
+Greetings,
+I want to tell you a story. Meet Sam. Sam is a young professional who feels like he needs help. 
+
+He knows that there are resources out there but he doesn't quite know where to start and he is not sure about calling 911. 
+
+-----------------------------------------------------
+
+Sam is not alone and you may have had a similar experience. 
+
+But what if there was a resource that could connect him with the help he needed? Human help.
+
+Hi my name is Amber and my team and I think we’ve created that solution.
+
+-----------------------------------------------------
+
+Community Connect is a mobile application that allows citizens in emergency and non emergency situations to connect with local resources in their area.
+
+Our goal is to change the instinctive behavior of calling 911 and instead, provide resources right at the users fingertips. 
+
+Dubbed “The new 911”, it is easy and accessible for all to use.
+
+Sam’s journey through the app might look something like this.
+
+Demo Video
+
+Sam quickly got the help he needed by answering a few prompts and no action was required from 911.
+
+-----------------------------------------------------
+
+Our customers are local and state governments who want to empower their citizens and keep their communities safe and connected. This partnership with local governments builds trust, Reduces 911 calls and restores confidence with the community.
+
+Governments will invest funding in Community Connect to help build out the resources, rollouts and service extensions. 
+
+We truly believe in the power of our product and Apps such as Ring and LiveSafe show that citizens indeed care about the communities they live and work in. There is even potential to integrate with these and other existing applications to expand our offerings.
+
+-----------------------------------------------------
+
+We envision starting with a pilot city to roll out. However, the potential reach is the entire country. When there is enough research, iteration, and testing, city governments around the country will gain more confidence in our product and move to implement the app.
+
+-----------------------------------------------------l
+
+The working prototype indicates that the possibilities of features for the app are endless. We want this to be a central location for learning about resources in their community. We also envision extending the core functionality with an assistant-like experience backed by machine learning to help guide users to connect with the humans and resources they are looking for. 
+
+-----------------------------------------------------
+
+Now you may ask.. why us? 
+
+Alexander using his technical expertise to be able to quickly tie together the resources, iterate on the product, and ship.
+Timothy brought invaluable experience to our brand and created user interface designs that are simple and serene.
+Amber utilizing her degree in business and experience to build out the revenue model to market and identify and target partnership strategies.
+
+-----------------------------------------------------
+
+As for Next Steps, We are seeking partnerships with the local government and safety and health organizations to bring their knowledge and expertise to the platform.
+
+Additionally, we are looking for funding from investors to cover the cost of creating, maintaining, and extending the application in hopes to scale nationwide.
+
+Help us reconnect the Community with Community Connect.
+
+
