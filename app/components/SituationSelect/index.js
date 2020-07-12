@@ -20,12 +20,13 @@ const SituationSelect = ({ navigation }) => {
             <H1 style={{ textAlign: 'center' }}>Select Your Situation</H1>
           </Col>
         </Row>
-        <Row size={30} style={{ justifyContent: 'center' }}>
+        <Row size={18} style={{ justifyContent: 'center' }}>
           <ButtonSelect navigation={navigation} navigationUrl={PHYSICALSELECT} name='Physical' infoText='You were in a car accident, Someone is exhibiting threatening behavior, etc...' />
         </Row>
-        <Row size={30} style={{ justifyContent: 'center' }}>
+        <Row size={18} style={{ justifyContent: 'center' }}>
           <ButtonSelect navigation={navigation} navigationUrl={MENTALSELECT} name='Emotional' infoText='You are feeling depressed, Your family member is having an mental health issue, etc...' />
         </Row>
+        <Row size={24} />
         <Row size={10}>
           <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandSuccess }}>
             <Text style={{ textAlign: 'center' }} onPress={() => Linking.openURL(TALLAHASSEE_NON_EMERGENCY_POLICE)}>Non-Emergency Police</Text>

@@ -8,13 +8,13 @@ import * as Linking from 'expo-linking'
 const ButtonSelect = ({ name, infoText = '', number = '', navigation, navigationUrl = '' }) => {
   return (
     <>
-      <Col size={infoText ? 85 : 100} style={{ alignContent: 'center', justifyContent: 'center' }}>
+      <Col size={infoText ? 90 : 100} style={{ alignContent: 'center', justifyContent: 'center', marginLeft: infoText ? 0 : 10 }}>
         <Button full info={number ? null : true} success={number ? true : null} large style={{ marginLeft: 20, marginRight: 20, height: 80 }} onPress={number ? () => Linking.openURL(number) : () => navigation.navigate(navigationUrl)}>
           <Text>{name}</Text>
         </Button>
       </Col>
       {!!infoText &&
-        <Col size={15} style={{ alignContent: 'center', justifyContent: 'center' }}>
+        <Col size={10} style={{ alignContent: 'center', justifyContent: 'center' }}>
           <Icon
             ios='ios-information-circle-outline'
             android='md-information-circle-outline'
