@@ -1,7 +1,7 @@
 
 import React from 'react'
 import materialv2 from '../../../native-base-theme/variables/variables_v2'
-import { Text, Button, Toast } from 'native-base'
+import { Text, Button, Toast, Icon } from 'native-base'
 import { Col } from 'react-native-easy-grid'
 import * as Linking from 'expo-linking'
 
@@ -15,9 +15,11 @@ const ButtonSelect = ({ name, infoText = '', number = '', navigation, navigation
       </Col>
       {!!infoText &&
         <Col size={15} style={{ alignContent: 'center', justifyContent: 'center' }}>
-          <Button
-            bordered
-            light
+          <Icon
+            ios='ios-information-circle-outline'
+            android='md-information-circle-outline'
+            style={{ color: 'white' }}
+            fontSize={32}
             onPress={() =>
               Toast.show({
                 text: infoText,
@@ -25,9 +27,7 @@ const ButtonSelect = ({ name, infoText = '', number = '', navigation, navigation
                 style: { height: 200, backgroundColor: materialv2.brandPrimary, margin: 20 },
                 duration: 30000
               })}
-          >
-            <Text style={{ fontWeight: 'bold' }}>?</Text>
-          </Button>
+          />
         </Col>}
     </>
   )
