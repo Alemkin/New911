@@ -5,7 +5,9 @@ import { useDispatch } from 'react-redux'
 import { Container, H1, Button, Text } from 'native-base'
 import ButtonSelect from '../ButtonSelect'
 import { Grid, Row, Col } from 'react-native-easy-grid'
-import { RESOURCESELECT, ROOT } from '../../constants/navigation'
+import { RESOURCESELECT } from '../../constants/navigation'
+import { EMERGENCY } from '../../constants/contactInfo'
+import * as Linking from 'expo-linking'
 import * as issues from '../../constants/issues'
 import { setSpecificIssue } from '../../reducers/userFlow'
 
@@ -36,8 +38,8 @@ const MentalSelect = ({ navigation }) => {
         <Row size={10} />
         <Row size={10}>
           <Col style={{ alignContent: 'center', justifyContent: 'center' }}>
-            <Button full danger onPress={() => navigation.navigate(ROOT)}>
-              <Text>I have an emergency</Text>
+            <Button full danger onPress={() => Linking.openURL(EMERGENCY)}>
+              <Text>Call 911</Text>
             </Button>
           </Col>
         </Row>

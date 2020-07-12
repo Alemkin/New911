@@ -4,8 +4,8 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Container, H1, Button, Text, Icon, Toast } from 'native-base'
 import { Grid, Row, Col } from 'react-native-easy-grid'
-import { TALLAHASSEE_NON_EMERGENCY_POLICE, TALLAHASSEE_NON_EMERGENCY_FIRE } from '../../constants/contactInfo'
-import { MENTALSELECT, PHYSICALSELECT, ROOT } from '../../constants/navigation'
+import { TALLAHASSEE_NON_EMERGENCY_POLICE, TALLAHASSEE_NON_EMERGENCY_FIRE, EMERGENCY } from '../../constants/contactInfo'
+import { MENTALSELECT, PHYSICALSELECT } from '../../constants/navigation'
 import * as situations from '../../constants/situations'
 import * as Linking from 'expo-linking'
 import materialv2 from '../../../native-base-theme/variables/variables_v2'
@@ -61,7 +61,7 @@ const SituationSelect = ({ navigation }) => {
           </Col>
         </Row>
         <Row size={18} style={{ justifyContent: 'center' }}>
-          <ButtonSelect handlePress={handlePress(situations.PHYSICAL, PHYSICALSELECT)} navigation={navigation} navigationUrl={PHYSICALSELECT} name={situations.PHYSICAL} infoText='You were in a car accident, Someone is exhibiting threatening behavior, etc...' />
+          <ButtonSelect handlePress={handlePress(situations.PHYSICAL, PHYSICALSELECT)} navigation={navigation} navigationUrl={PHYSICALSELECT} name={situations.PHYSICAL} infoText='You were in a minor car accident, Someone is exhibiting minor threatening behavior, etc...' />
         </Row>
         <Row size={18} style={{ justifyContent: 'center' }}>
           <ButtonSelect handlePress={handlePress(situations.EMOTIONAL, MENTALSELECT)} navigation={navigation} navigationUrl={MENTALSELECT} name={situations.EMOTIONAL} infoText='You are feeling depressed, Your family member is having an mental health issue, etc...' />
@@ -77,8 +77,8 @@ const SituationSelect = ({ navigation }) => {
         </Row>
         <Row size={10}>
           <Col style={{ alignContent: 'center', justifyContent: 'center' }}>
-            <Button full danger onPress={() => navigation.navigate(ROOT)}>
-              <Text>I have an emergency</Text>
+            <Button full danger onPress={() => Linking.openURL(EMERGENCY)}>
+              <Text>Call 911</Text>
             </Button>
           </Col>
         </Row>

@@ -20,7 +20,7 @@ const appTitle = 'Community Connect'
 
 const SharedButton = ({ navigation }) =>
   <Button transparent onPress={() => navigation.navigate(DIRECTORY)}>
-    <Text style={{ color: 'white' }}>Directory</Text>
+    <Text style={{ color: 'white' }}>List</Text>
   </Button>
 
 const Navigation = () => {
@@ -86,14 +86,14 @@ const Navigation = () => {
           name={DIRECTORY}
           component={Directory}
           options={{
-            title: `${appTitle} - Directory`
+            title: `${appTitle}`
           }}
         />
         <Stack.Screen
           name={DIRECTORYINFO}
           component={DirectoryInfo}
           options={{
-            title: `${appTitle} - Directory Info`
+            title: `${appTitle}`
           }}
         />
       </Stack.Navigator>
