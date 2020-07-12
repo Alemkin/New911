@@ -35,8 +35,10 @@ const SituationSelect = ({ navigation }) => {
           </Col>
         </Row>
         <Row size={10}>
-          <Col style={{ justifyContent: 'center', backgroundColor: materialv2.brandDanger, borderTopWidth: 1 }}>
-            <Text style={{ textAlign: 'center' }} onPress={() => navigation.navigate(ROOT)}>I have an emergency</Text>
+          <Col style={{ alignContent: 'center', justifyContent: 'center' }}>
+            <Button full danger onPress={() => navigation.navigate(ROOT)}>
+              <Text>I have an emergency</Text>
+            </Button>
           </Col>
         </Row>
       </Grid>
